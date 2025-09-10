@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="#222">
+
+        <!-- Touchpad Area -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/touchPad"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Button Area -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="#111"
+        android:gravity="center"
+
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/leftClick"
+            android:layout_width="0dp"
+            android:textSize="15dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bacik_shape"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="Left Click" />
+
+        <TextView
+            android:id="@+id/rightClick"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background = "@drawable/bacik_shape"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Right Click" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
